@@ -13,6 +13,8 @@ const CardContainer = styled.div`
   font-size: 24px;
   cursor: pointer;
   user-select: none;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transform: ${(props) => (props.isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)')};
 `;
 
 const Card = ({ value, isFlipped, onClick }) => {
